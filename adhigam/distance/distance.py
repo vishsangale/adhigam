@@ -25,3 +25,19 @@ def manhattan(
             f"Shape or size of x and y does not matches, x shape {x.shape}, y shape {y.shape}"
         )
     return np.abs(x[0] - y[0]) + np.abs(x[1] - y[1])
+
+
+def euclidean(
+    x: Union[list, np.array], y: Union[list, np.array]
+) -> Union[float, list, np.array]:
+    """Calculate manhattan distance between two points.
+    The distance between two points measured along axes at right angles.
+
+    Args:
+        x: Point x
+        y: Point y
+
+    Returns:
+
+    """
+    return np.sqrt(np.sum(np.square(x - y)))
